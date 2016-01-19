@@ -1,8 +1,8 @@
-﻿'use strict';
+'use strict';
 
-contactApplication.config([ '$locationProvider', '$routeProvider', championsRoute ]);
+contactApplication.config([ '$locationProvider', '$routeProvider', standingsRoute ]);
 
-function championsRoute($locationProvider, $routeProvider)
+function standingsRoute($locationProvider, $routeProvider)
 {
 	$locationProvider.html5Mode(true);
 

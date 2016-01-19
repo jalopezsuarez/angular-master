@@ -14,6 +14,5 @@ function standingsController($scope, $templateCache, standingsService)
 
 			$scope.activityPeticion = false;
 		});
-
 	};
 }
