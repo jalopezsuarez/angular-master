@@ -1,0 +1,6 @@
+{{standing.position}}:{{standing.Driver.givenName}}&nbsp;{{standing.Driver.familyName}}
+<div ng-if="displayTimestamp">
+	<a href="{{standing.Driver.url}}">More information!</a>
+</div>
+<button ng-click="displayTimestamp=true">Fade In!</button>
+<button ng-click="displayTimestamp=false">Fade Out!</button>
