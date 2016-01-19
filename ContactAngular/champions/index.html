@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Champions AngularJS</title>
+
+<base href='/champions/' />
+
+<!-- Libraries Styles -->
+<link rel="stylesheet" href="library/angular-activity/css/ngActivityIndicator.min.css">
+<!-- /Libraries Styles -->
+
+<!-- Application Styles -->
+<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<!-- /Application Styles -->
+
+<!-- AngularJS -->
+<script src='library/angularjs/angular.min.js'></script>
+<script src='library/angularjs/angular-route.min.js'></script>
+<script src='library/angularjs/angular-sanitize.min.js'></script>
+<script src='models/application/app.js'></script>
+<script src='models/application/app.config.js'></script>
+<!-- /AngularJS -->
+
+<!-- Libraries -->
+<script src='library/angular-busy/angular-busy.js'></script>
+<script src="library/angular-activity/ngActivityIndicator.min.js"></script>
+<!-- /Libraries -->
+
+<!-- Services -->
+<script src='models/service/StandingsService.js'></script>
+<!-- /Services -->
+
+<!-- Controllers -->
+<script src='models/controller/StandingsController.js'></script>
+<!-- /Controllers -->
+
+</head>
+
+<body ng-app='championsApplication'>
+	<h1>Champions AngularJS</h1>
+	<ng-view></ng-view>
+	<h1>VEMOVI DESARROLLA v20160119</h1>
+</body>
+
+</html>
