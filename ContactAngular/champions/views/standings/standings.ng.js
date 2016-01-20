@@ -1,8 +1,6 @@
 ﻿'use strict';
 
-var ngApplication = angular.module('championsApplication.controllers', []);
-
-ngApplication.controller('standingsController', function($scope, $templateCache, standingsService)
+ngAppliationControllers.controller('standingsController', function($scope, $templateCache, standingsService)
 {
 	$scope.peticion = function()
 	{

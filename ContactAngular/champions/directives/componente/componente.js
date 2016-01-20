@@ -1,7 +1,6 @@
 'use strict';
 
-var ngApplication = angular.module('championsApplication.directives', []);
-ngApplication.directive('ngComponente', function(standingsService)
+ngApplicationDirectives.directive('ngComponente', function(standingsService)
 {
 	return {
 		restrict : 'A',
@@ -18,7 +17,6 @@ ngApplication.directive('ngComponente', function(standingsService)
 			{
 				$scope.prueba = response.MRData.StandingsTable.season;
 				$scope.activityComponente = false;
-				$("#jRate").jRate();
 			});
 		} ]
 	}

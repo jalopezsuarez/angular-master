@@ -1,7 +1,6 @@
 ﻿'use strict';
 
-var ngApplication = angular.module('championsApplication.services', []);
-ngApplication.factory('standingsService', function($http)
+ngApplicationServices.factory('standingsService', function($http)
 {
 	var standingsService = {};
 

@@ -5,12 +5,18 @@
 <base href='/champions/' />
 
 <!-- Libraries Styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.0.1/jquery.rateyo.min.css">
 <link rel="stylesheet" href="library/angular/angular-activity/css/ngActivityIndicator.min.css">
 <!-- /Libraries Styles -->
 
 <!-- Application Styles -->
 <link rel="stylesheet" type="text/css" href="styles/styles.css">
 <!-- /Application Styles -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="library/jquery/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.0.1/jquery.rateyo.min.js"></script>
+<!-- /jQuery -->
 
 <!-- AngularJS -->
 <script src='library/angular/angularjs/angular.min.js'></script>
@@ -34,17 +40,13 @@
 
 <!-- Directives -->
 <script src='directives/componente/componente.js'></script>
+<script src='directives/rate/rate.js'></script>
 <!-- /Directives -->
 
-<!-- jQuery Libraries -->
-<script src="library/jquery/jrate/jRate.js"></script>
-<!-- /jQuery Libraries -->
 </head>
 
-<body ng-app='championsApplication'">
-	<h1>Champions AngularJS</h1>
+<body ng-app='championsApplication'>
 	<ng-view></ng-view>
-	<h1>VEMOVI DESARROLLA v20160119</h1>
 </body>
 
 </html>
