@@ -2,40 +2,45 @@
 <head>
 <title>Champions AngularJS</title>
 
-<base href='/champions/' />
+<base href='/ss/ContactAngular/champions/' />
 
 <!-- Libraries Styles -->
-<link rel="stylesheet" href="library/angular-activity/css/ngActivityIndicator.min.css">
+<link rel="stylesheet" href="library/angular/angular-activity/css/ngActivityIndicator.min.css">
 <!-- /Libraries Styles -->
 
 <!-- Application Styles -->
-<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
 <!-- /Application Styles -->
 
 <!-- AngularJS -->
-<script src='library/angularjs/angular.min.js'></script>
-<script src='library/angularjs/angular-route.min.js'></script>
-<script src='library/angularjs/angular-sanitize.min.js'></script>
+<script src='library/angular/angularjs/angular.min.js'></script>
+<script src='library/angular/angularjs/angular-route.min.js'></script>
+<script src='library/angular/angularjs/angular-sanitize.min.js'></script>
 <script src='models/application/app.js'></script>
 <script src='models/application/app.config.js'></script>
 <!-- /AngularJS -->
 
 <!-- Libraries -->
-<script src='library/angular-busy/angular-busy.js'></script>
-<script src="library/angular-activity/ngActivityIndicator.min.js"></script>
+<script src="library/angular/angular-activity/ngActivityIndicator.min.js"></script>
 <!-- /Libraries -->
 
 <!-- Services -->
-<script src='models/service/StandingsService.js'></script>
+<script src='models/service/standings.js'></script>
 <!-- /Services -->
 
 <!-- Controllers -->
-<script src='models/controller/StandingsController.js'></script>
+<script src='views/standings/standings.ng.js'></script>
 <!-- /Controllers -->
+
+<!-- Directives -->
+<script src='directives/componente/componente.js'></script>
+<!-- /Directives -->
+
+<script src="library/jquery/jrate/jRate.js"></script>
 
 </head>
 
-<body ng-app='championsApplication'>
+<body ng-app='championsApplication'">
 	<h1>Champions AngularJS</h1>
 	<ng-view></ng-view>
 	<h1>VEMOVI DESARROLLA v20160119</h1>

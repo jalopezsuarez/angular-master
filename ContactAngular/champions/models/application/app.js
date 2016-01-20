@@ -1,3 +1,6 @@
 ﻿'use strict';
 
-var contactApplication = angular.module('championsApplication', [ 'championsApplication.controllers', 'championsApplication.services', 'ngRoute', 'ngBusy', 'ngActivityIndicator' ]);
+var ngApplication = angular.module('championsApplication', [
+		'championsApplication.controllers', 'championsApplication.services',
+		'championsApplication.directives', 'ngRoute',
+		'ngActivityIndicator' ]);
