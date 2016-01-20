@@ -1,7 +1,8 @@
 'use strict';
 
 var ngApplication = angular.module('championsApplication.directives', []);
-ngApplication.directive('ngComponente', function(standingsService) {
+ngApplication.directive('ngComponente', function(standingsService)
+{
 	return {
 		restrict : 'A',
 		require : '^ngModel',
@@ -10,9 +11,11 @@ ngApplication.directive('ngComponente', function(standingsService) {
 			ngLatitude : '@'
 		},
 		templateUrl : 'directives/componente/componente.html',
-		controller : [ '$scope', function($scope) {
+		controller : [ '$scope', function($scope)
+		{
 			$scope.activityComponente = true;
-			standingsService.realizarPeticion().success(function(response) {
+			standingsService.realizarPeticion().success(function(response)
+			{
 				$scope.prueba = response.MRData.StandingsTable.season;
 				$scope.activityComponente = false;
 				$("#jRate").jRate();

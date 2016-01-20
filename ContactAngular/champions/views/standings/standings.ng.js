@@ -2,20 +2,17 @@
 
 var ngApplication = angular.module('championsApplication.controllers', []);
 
-ngApplication
-		.controller(
-				'standingsController',
-				function($scope, $templateCache, standingsService) {
-					$scope.peticion = function() {
-						$scope.activityPeticion = true;
-						standingsService
-								.realizarPeticion()
-								.success(
-										function(response) {
-											$scope.season = response.MRData.StandingsTable.season;
-											$scope.standings = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+ngApplication.controller('standingsController', function($scope, $templateCache, standingsService)
+{
+	$scope.peticion = function()
+	{
+		$scope.activityPeticion = true;
+		standingsService.realizarPeticion().success(function(response)
+		{
+			$scope.season = response.MRData.StandingsTable.season;
+			$scope.standings = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
 
-											$scope.activityPeticion = false;
-										});
-					};
-				});
+			$scope.activityPeticion = false;
+		});
+	};
+});
