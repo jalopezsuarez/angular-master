@@ -5,15 +5,3 @@ h1 {
 	font-size: 14px;
 	padding: 10px;
 }
-
-[multiplication-table] > div {
-  display:block;
-}
-
-[multiplication-table] > div > div{
-  display:inline-block;
-  border:1px solid #ddd;
-  width:50px;
-  line-height:50px;
-  text-align:center;
-}

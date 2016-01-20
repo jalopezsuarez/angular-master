@@ -1,6 +1,7 @@
 'use strict';
 
-ngApplication.config(function($locationProvider, $routeProvider) {
+ngApplication.config(function($locationProvider, $routeProvider)
+{
 	$locationProvider.html5Mode(true);
 
 	$routeProvider.when('/standings', {
