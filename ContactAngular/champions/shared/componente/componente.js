@@ -9,7 +9,7 @@ ngApplicationDirectives.directive('ngComponente', function(standingsService)
 			ngCity : '@',
 			ngLatitude : '@'
 		},
-		templateUrl : 'directives/componente/componente.html',
+		templateUrl : 'shared/componente/componente.html',
 		controller : [ '$scope', function($scope)
 		{
 			$scope.activityComponente = true;
