@@ -1,10 +1,8 @@
 'use strict';
 
 ngApplicationFactory.factory('UserService', UserService);
-
 function UserService($timeout, $filter, $q)
 {
-
 	var service = {};
 
 	service.GetAll = GetAll;
