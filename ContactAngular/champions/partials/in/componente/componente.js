@@ -1,6 +1,7 @@
 'use strict';
 
-ngApplicationDirectives.directive('ngComponente', function(standingsService)
+ngApplicationDirectives.directive('ngComponente', Componente);
+function Componente(standingsService)
 {
 	return {
 		restrict : 'A',
@@ -20,4 +21,4 @@ ngApplicationDirectives.directive('ngComponente', function(standingsService)
 			});
 		} ]
 	}
-});
+}

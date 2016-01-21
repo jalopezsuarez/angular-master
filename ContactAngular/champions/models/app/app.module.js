@@ -1,7 +1,7 @@
 ﻿'use strict';
 
-var ngApplication = angular.module('championsApplication', [ 'championsApplication.controllers', 'championsApplication.services', 'championsApplication.directives', 'ngRoute', 'ngActivityIndicator' ]);
+var ngApplication = angular.module('ngApplication', [ 'ngApplication.factory', 'ngApplication.controllers', 'ngApplication.directives', 'ngRoute', 'ngActivityIndicator' ]);
 
-var ngAppliationControllers = angular.module('championsApplication.controllers', []);
-var ngApplicationServices = angular.module('championsApplication.services', []);
-var ngApplicationDirectives = angular.module('championsApplication.directives', []);
+var ngApplicationFactory = angular.module('ngApplication.factory', []);
+var ngAppliationControllers = angular.module('ngApplication.controllers', []);
+var ngApplicationDirectives = angular.module('ngApplication.directives', []);

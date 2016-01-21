@@ -1,6 +1,7 @@
 ﻿'use strict';
 
-ngAppliationControllers.controller('standingsController', function($scope, $templateCache, localStorage, standingsService)
+ngAppliationControllers.controller('standingsController', StandingsController);
+function StandingsController($scope, $templateCache, localStorage, standingsService)
 {
 	$scope.peticion = function()
 	{
@@ -24,4 +25,4 @@ ngAppliationControllers.controller('standingsController', function($scope, $temp
 	{
 		localStorage.remove('test');
 	};
-});
+}

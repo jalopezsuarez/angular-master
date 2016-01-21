@@ -1,6 +1,7 @@
 'use strict';
 
-ngApplicationDirectives.directive('ngAcceso', function()
+ngApplicationDirectives.directive('ngAcceso', Acceso);
+function Acceso()
 {
 	return {
 		restrict : 'A',
@@ -10,7 +11,7 @@ ngApplicationDirectives.directive('ngAcceso', function()
 		replace : true,
 		link : function(scope, element, attrs)
 		{
-		
+
 		}
 	}
-});
+}

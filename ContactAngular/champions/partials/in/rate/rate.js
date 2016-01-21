@@ -1,6 +1,7 @@
 'use strict';
 
-ngApplicationDirectives.directive('ngRate', function()
+ngApplicationDirectives.directive('ngRate', Rate);
+function Rate()
 {
 	return {
 		restrict : 'A',
@@ -25,4 +26,4 @@ ngApplicationDirectives.directive('ngRate', function()
 			});
 		}
 	}
-});
+}

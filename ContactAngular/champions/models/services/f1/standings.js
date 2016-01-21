@@ -1,6 +1,7 @@
 ﻿'use strict';
 
-ngApplicationServices.factory('standingsService', function($http)
+ngApplicationFactory.factory('standingsService', StandingsService);
+function StandingsService($http)
 {
 	var standingsService = {};
 
@@ -14,4 +15,4 @@ ngApplicationServices.factory('standingsService', function($http)
 	}
 
 	return standingsService;
-});
+}

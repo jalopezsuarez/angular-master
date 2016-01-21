@@ -1,6 +1,7 @@
 'use strict';
 
-ngApplicationServices.factory('localStorage', function($parse)
+ngApplicationFactory.factory('localStorage', LocalStorage);
+function LocalStorage($parse)
 {
 	/**
 	 * Global Vars
@@ -151,4 +152,4 @@ ngApplicationServices.factory('localStorage', function($parse)
 		}
 	};
 	return publicMethods;
-});
+}
