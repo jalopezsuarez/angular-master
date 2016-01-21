@@ -12,6 +12,7 @@ function Access(AccessService, $location)
 		{
 			$scope.login = function()
 			{
+				$scope.activityAccess = true;
 				AccessService.clearCredentials();
 				AccessService.login($scope.username, $scope.password, function(response)
 				{
@@ -24,6 +25,7 @@ function Access(AccessService, $location)
 					{
 						alert(response.message);
 					}
+					$scope.activityAccess = false;
 				});
 			};
 		} ]
