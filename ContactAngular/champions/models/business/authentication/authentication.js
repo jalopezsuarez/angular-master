@@ -4,16 +4,13 @@ ngApplicationFactory.factory('AuthenticationService', AuthenticationService);
 function AuthenticationService($http, $cookieStore, $rootScope, $timeout, UserService)
 {
 	var service = {};
-
 	service.Login = Login;
 	service.SetCredentials = SetCredentials;
 	service.ClearCredentials = ClearCredentials;
-
 	return service;
 
 	function Login(username, password, callback)
 	{
-
 		/*
 		 * Dummy authentication for testing, uses $timeout to simulate api call
 		 * ----------------------------------------------
