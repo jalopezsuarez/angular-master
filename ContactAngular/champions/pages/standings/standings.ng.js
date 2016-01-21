@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-ngAppliationControllers.controller('standingsController', function($scope, $templateCache, standingsService)
+ngAppliationControllers.controller('standingsController', function($scope, $templateCache, localStorage, standingsService)
 {
 	$scope.peticion = function()
 	{
@@ -17,5 +17,11 @@ ngAppliationControllers.controller('standingsController', function($scope, $temp
 	$scope.callback = function(item, stars)
 	{
 		$scope.stars = stars;
+	};
+
+	localStorage.bind($scope, 'test', 'Some Default Text');
+	$scope.clearTest = function()
+	{
+		localStorage.remove('test');
 	};
 });
