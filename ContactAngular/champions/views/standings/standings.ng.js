@@ -13,4 +13,9 @@ ngAppliationControllers.controller('standingsController', function($scope, $temp
 			$scope.activityPeticion = false;
 		});
 	};
+
+	$scope.callback = function(item, stars)
+	{
+		$scope.stars = stars;
+	};
 });

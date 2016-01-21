@@ -4,12 +4,24 @@ ngApplicationDirectives.directive('ngRate', function()
 {
 	return {
 		restrict : 'A',
-		scope : {},
+		scope : {
+			callback : '&'
+		},
 		replace : true,
 		link : function(scope, element, attrs)
 		{
 			$(element).rateYo({
-				starWidth : "40px"
+
+				onChange : function(rating, rateYoInstance)
+				{
+
+					scope.$apply(function()
+					{
+						scope.callback({
+							stars : rating
+						});
+					});
+				}
 			});
 		}
 	}

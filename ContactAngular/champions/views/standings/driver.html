@@ -5,7 +5,7 @@
 	<button ng-click="displayTimestamp=false">Fade Out!</button>
 	<div ng-if="displayTimestamp">
 		<a href="{{standing.Driver.url}}">More information!</a>
-		<div ng-rate></div>
+		<div ng-rate callback="callback(item,stars)"></div>
+		<div>{{stars}}</div>
 	</div>
-
 </div>
