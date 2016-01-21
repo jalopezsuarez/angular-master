@@ -7,17 +7,13 @@
 
 <title>Champions AngularJS</title>
 
-<base href='/champions/' />
+<base href='/ng/ng/ContactAngular/champions/' />
 
 <!-- Libraries Styles -->
 <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="libs/jquery/rateyo/jquery.rateyo.min.css">
 <link rel="stylesheet" href="libs/angular/angular-activity/css/ngActivityIndicator.min.css">
 <!-- /Libraries Styles -->
-
-<!-- Application Styles -->
-<link rel="stylesheet" type="text/css" href="public/css/styles.css">
-<!-- /Application Styles -->
 
 <!-- jQuery -->
 <script src="libs/jquery/jquery/jquery.min.js"></script>
@@ -29,8 +25,8 @@
 <script src='libs/angular/angularjs/angular.min.js'></script>
 <script src='libs/angular/angularjs/angular-route.min.js'></script>
 <script src='libs/angular/angularjs/angular-sanitize.min.js'></script>
-<script src='models/commons/app.js'></script>
-<script src='models/commons/app.config.js'></script>
+<script src='models/app/app.module.js'></script>
+<script src='models/app/app.routes.js'></script>
 <!-- /AngularJS -->
 
 <!-- Libraries -->
@@ -43,12 +39,14 @@
 <!-- /Services -->
 
 <!-- Controllers -->
-<script src='pages/standings/standings.ng.js'></script>
+<script src='pages/on/ranking/ranking.ng.js'></script>
+<script src='pages/in/standings/standings.ng.js'></script>
 <!-- /Controllers -->
 
 <!-- Directives -->
-<script src='shared/componente/componente.js'></script>
-<script src='shared/rate/rate.js'></script>
+<script src='partials/on/acceso/acceso.js'></script>
+<script src='partials/in/componente/componente.js'></script>
+<script src='partials/in/rate/rate.js'></script>
 <!-- /Directives -->
 
 </head>
