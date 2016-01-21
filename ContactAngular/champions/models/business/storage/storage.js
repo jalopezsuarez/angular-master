@@ -1,6 +1,6 @@
 'use strict';
 
-ngApplicationFactory.factory('localStorage', LocalStorage);
+ngApplicationFactory.factory('LocalStorage', LocalStorage);
 function LocalStorage($parse)
 {
 	/**

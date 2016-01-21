@@ -6,13 +6,13 @@ ngApplication.config(function($locationProvider, $routeProvider)
 
 	$routeProvider.when('/in/standings', {
 		templateUrl : 'pages/in/standings/standings.ng.html',
-		controller : 'standingsController',
+		controller : 'StandingsController',
 		css: 'public/in/css/styles.css'
 	});
 	
 	$routeProvider.when('/on/ranking', {
 		templateUrl : 'pages/on/rangking/ranking.ng.html',
-		controller : 'rankingController',
+		controller : 'RankingController',
 		css: 'public/on/css/styles.css'
 	});
 

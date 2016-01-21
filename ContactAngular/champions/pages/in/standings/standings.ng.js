@@ -1,12 +1,12 @@
 ﻿'use strict';
 
-ngAppliationControllers.controller('standingsController', StandingsController);
-function StandingsController($scope, $templateCache, localStorage, standingsService)
+ngAppliationControllers.controller('StandingsController', StandingsController);
+function StandingsController($scope, $templateCache, LocalStorage, StandingsService)
 {
 	$scope.peticion = function()
 	{
 		$scope.activityPeticion = true;
-		standingsService.realizarPeticion().success(function(response)
+		StandingsService.realizarPeticion().success(function(response)
 		{
 			$scope.season = response.MRData.StandingsTable.season;
 			$scope.standings = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
@@ -20,9 +20,9 @@ function StandingsController($scope, $templateCache, localStorage, standingsServ
 		$scope.stars = stars;
 	};
 
-	localStorage.bind($scope, 'test', 'Some Default Text');
+	LocalStorage.bind($scope, 'test', 'persistent text');
 	$scope.clearTest = function()
 	{
-		localStorage.remove('test');
+		LocalStorage.remove('test');
 	};
 }
