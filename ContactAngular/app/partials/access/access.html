@@ -2,14 +2,13 @@
 	<form ng-submit="login()">
 		<fieldset>
 			<label>Username</label>
-			<input type="text" name="username" id="username" class="form-control" ng-model="username" required />
-		</fieldset>
-		<fieldset>
+			<input type="text" name="username" id="username" ng-model="username" />
 			<label>Password</label>
-			<input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+			<input type="password" name="password" id="password" ng-model="password" />
 		</fieldset>
 		<fieldset>
-			<button type="submit" class="btn btn-primary">Login</button>
+			<button type="submit">Login</button>
 		</fieldset>
 	</form>
+	<div ng-show="activityAccess" ng-activity-indicator skip-ng-show="yes"></div>
 </div>

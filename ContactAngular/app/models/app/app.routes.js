@@ -35,9 +35,14 @@ ngApplication.run(function run($rootScope, $location, $cookieStore, $http)
 			$location.path('/access');
 		}
 	});
-	$rootScope.$on('$routeChangeSuccess', function(ev, data)
+	$rootScope.$on('$routeChangeSuccess', function(event, data)
 	{
-		if (data.$route && data.$route.controller)
-			$rootScope.controller = data.$route.controller;
+		var cssModules = '';
+		var restrictions = $location.path().search('/in/') > 0 || $location.path().match('^/in/') || $location.path().match('^in/');
+		if (restrictions)
+		{
+			cssModules = 'in';
+		}
+		$rootScope.controller = cssModules;
 	});
 });
