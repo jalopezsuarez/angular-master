@@ -1,0 +1,31 @@
+<div>
+	<div class="test">in</div>
+
+	<img src="public/img/angularjs.png" width=64 height=64>
+
+	<button ng-click="peticion()">Formula1 Drivers</button>
+	<div ng-show="activityPeticion" ng-activity-indicator skip-ng-show="yes"></div>
+
+	<div ng-if="season">Season {{season}}</div>
+
+	<ul>
+		<li ng-if="!standings" ng-show="!activityPeticion">No drivers loaded.</li>
+		<li ng-repeat="standing in standings" ng-include="'pages/in/standings/driver.html'"></li>
+	</ul>
+
+	<div ng-componente ng-city="San Francisco" ng-latitude="34.33"></div>
+	<div ng-componente ng-city="Pepe" ng-latitude="32423"></div>
+	<div ng-componente ng-city="El Ejido" ng-latitude="32423"></div>
+
+	<div>
+		<p>{{test}}</p>
+		<label>Local Storage Bound:</label>
+		<input type="text" ng-model="test">
+		<a ng-click="clearTest()">Clear Value from LC</a>
+		<p>
+			<i>Change the value in the textbox and refresh the page!</i>
+		</p>
+	</div>
+
+</div>
+
