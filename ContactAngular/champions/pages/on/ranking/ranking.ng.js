@@ -1,10 +1,7 @@
 ﻿'use strict';
 
-ngAppliationControllers.controller('rankingController', RankingController);
+ngAppliationControllers.controller('RankingController', RankingController);
 function RankingController($scope, $templateCache, LocalStorage)
 {
-	$scope.peticion = function()
-	{
 
-	};
 }

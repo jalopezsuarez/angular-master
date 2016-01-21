@@ -25,7 +25,7 @@
 <!-- AngularJS -->
 <script src='libs/angular/angularjs/angular.min.js'></script>
 <script src='libs/angular/angularjs/angular-route.min.js'></script>
-<script src='libs/angular/angularjs/angular-sanitize.min.js'></script>
+<script src='libs/angular/angular-css/angular-css.min.js'></script>
 <script src='models/app/app.module.js'></script>
 <script src='models/app/app.routes.js'></script>
 <!-- /AngularJS -->
@@ -36,6 +36,7 @@
 
 <!-- Factory -->
 <script src='models/business/authentication/authentication.js'></script>
+<script src='models/business/authentication/user.js'></script>
 <script src='models/business/storage/storage.js'></script>
 <script src='models/services/f1/standings.js'></script>
 <!-- /Factory -->
@@ -52,6 +53,9 @@
 <!-- /Directives -->
 
 </head>
+
+<!-- AngularJS Animations -->
+<!-- http://www.nganimate.org/angularjs/ng-switch/slider-css3-transition-animation -->
 
 <body ng-app='ngApplication'>
 	<ng-view></ng-view>
