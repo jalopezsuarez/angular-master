@@ -1,7 +1,1 @@
-.test {
-	background: green !important;
-}
-
-.in .test {
-	background: blue !important;
-}
+@import url("meteo.css");

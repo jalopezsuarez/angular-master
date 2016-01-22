@@ -1,7 +1,7 @@
 'use strict';
 
 ngApplicationDirectives.directive('ngComponente', Componente);
-function Componente(StandingsService)
+function Componente(MasterService)
 {
 	return {
 		restrict : 'A',
@@ -14,7 +14,7 @@ function Componente(StandingsService)
 		controller : [ '$scope', function($scope)
 		{
 			$scope.activityComponente = true;
-			StandingsService.realizarPeticion().success(function(response)
+			MasterService.realizarPeticion().success(function(response)
 			{
 				$scope.prueba = response.MRData.StandingsTable.season;
 				$scope.activityComponente = false;

@@ -9,9 +9,9 @@ ngApplication.config(function($locationProvider, $routeProvider)
 		controller : 'AccessController'
 	});
 
-	$routeProvider.when('/in/standings', {
-		templateUrl : 'pages/in/standings/standings.ng.html',
-		controller : 'StandingsController'
+	$routeProvider.when('/in/meteo', {
+		templateUrl : 'pages/in/meteo/meteo.ng.html',
+		controller : 'MeteoController'
 	});
 
 	$routeProvider.otherwise({

@@ -7,6 +7,7 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 	{
 		service.login = login;
 		service.setCredentials = setCredentials;
+		service.getCredentials = getCredentials;
 		service.clearCredentials = clearCredentials;
 	}
 	return service;
@@ -14,7 +15,7 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 	function login(username, password, callback)
 	{
 		/*
-		 * Dummy authentication for testing, uses $timeout to simulate api call
+		 * Dummy authentication for testing $timeout to simulate network
 		 * ----------------------------------------------
 		 */
 		$timeout(function()
@@ -37,7 +38,7 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 		}, 1000);
 
 		/*
-		 * Use this for real authentication
+		 * Use this for real server authentication credentials
 		 * ----------------------------------------------
 		 */
 		// $http.post('/api/authenticate', { username: username, password:
@@ -47,13 +48,14 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 		// });
 	}
 
-	function setCredentials(username, password)
+	function setCredentials(username, token)
 	{
-		var authdata = Base64.encode(username + ':' + password);
+		var authdata = Base64.encode(username + ':' + token);
 
 		$rootScope.globals = {
 			currentUser : {
 				username : username,
+				token : token,
 				authdata : authdata
 			}
 		};
@@ -70,7 +72,7 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 	}
 }
 
-// Base64 encoding service used by AuthenticationService
+// Base64 encoding service used by AccessService
 var Base64 = {
 
 	keyStr : 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
