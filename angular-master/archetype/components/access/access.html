@@ -1,0 +1,39 @@
+<div class="row" ng-if="!credentials">
+	<div class="col-md-12">
+		<section class="login-form">
+			<form method="post" role="login" ng-submit="login()">
+				<img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
+				<input type="text" name="username" id="username" ng-model="username" placeholder="Username" required
+					class="form-control input-lg" />
+				<input type="password" name="password" id="password" ng-model="password" placeholder="Password"
+					class="form-control input-lg" />
+				<div ng-show="activityAccess" ng-activity-indicator skip-ng-show="yes"></div>
+				<button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+				<div>
+					<a href="#">Create account</a>
+					or
+					<a href="#">reset password</a>
+				</div>
+			</form>
+			<div class="form-links">
+				<a href="#">www.website.com</a>
+			</div>
+		</section>
+	</div>
+</div>
+<div class="row" ng-if="credentials">
+	<div class="col-md-12">
+		<section class="login-form">
+			<form method="post" ng-submit="logout()" role="login">
+				<img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
+				<div type="username" name="username" required value="">{{credentials.username}}</div>
+				<button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Logout</button>
+			</form>
+			<div class="form-links">
+				<a href="#">www.website.com</a>
+			</div>
+		</section>
+	</div>
+</div>
+
+

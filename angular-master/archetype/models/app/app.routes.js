@@ -4,14 +4,14 @@ ngApplication.config(function($locationProvider, $routeProvider)
 {
 	$locationProvider.html5Mode(true);
 
-	$routeProvider.when('/access', {
-		templateUrl : 'pages/access/access.ng.html',
-		controller : 'AccessController'
+	$routeProvider.when('/', {
+		templateUrl : 'pages/app/app.ng.html',
+		controller : 'ApplicationController'
 	});
 
-	$routeProvider.when('/in/standings', {
-		templateUrl : 'pages/in/standings/standings.ng.html',
-		controller : 'StandingsController'
+	$routeProvider.when('/in/meteo', {
+		templateUrl : 'pages/in/meteo/meteo.ng.html',
+		controller : 'MeteoController'
 	});
 
 	$routeProvider.otherwise({
@@ -32,17 +32,17 @@ ngApplication.run(function run($rootScope, $location, $cookieStore, $http)
 		var authenticated = $rootScope.globals.currentUser;
 		if (restrictions && !authenticated)
 		{
-			$location.path('/access');
+			$location.path('/');
 		}
 	});
 	$rootScope.$on('$routeChangeSuccess', function(event, data)
 	{
-		var cssModules = '';
+		var locationStyles = '';
 		var restrictions = $location.path().search('/in/') > 0 || $location.path().match('^/in/') || $location.path().match('^in/');
 		if (restrictions)
 		{
-			cssModules = 'in';
+			routeStyles = 'in';
 		}
-		$rootScope.controller = cssModules;
+		$rootScope.module = locationStyles;
 	});
 });

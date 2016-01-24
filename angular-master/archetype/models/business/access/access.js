@@ -7,6 +7,7 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 	{
 		service.login = login;
 		service.setCredentials = setCredentials;
+		service.hasCredentials = hasCredentials;
 		service.clearCredentials = clearCredentials;
 	}
 	return service;
@@ -47,9 +48,9 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 		// });
 	}
 
-	function setCredentials(username, password)
+	function setCredentials(username, token)
 	{
-		var authdata = Base64.encode(username + ':' + password);
+		var authdata = username + ':' + token;
 
 		$rootScope.globals = {
 			currentUser : {
@@ -60,6 +61,11 @@ function AccessService($http, $cookieStore, $rootScope, $timeout)
 
 		$http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
 		$cookieStore.put('globals', $rootScope.globals);
+	}
+
+	function hasCredentials()
+	{
+		return $rootScope.globals.currentUser;
 	}
 
 	function clearCredentials()
