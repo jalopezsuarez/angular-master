@@ -7,11 +7,11 @@ function MeteoService($http)
 
 	meteoService.realizarPeticion = function()
 	{
-		var resultado = $http({
+		var response = $http({
 			method : 'JSONP',
 			url : 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
 		});
-		return resultado;
+		return response;
 	}
 
 	return meteoService;
